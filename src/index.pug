@@ -1,0 +1,74 @@
+doctype html
+html
+	head
+		title test
+		link(rel='stylesheet' href='styles/main.css')
+	body
+		section.page
+			.page__unit
+				form.login-form
+					a(href='#').login-form__close
+					.login-form__wrap
+						.login-form__col
+							.login-form__row.login-form__row_title
+								h2 Ваши данные
+							.login-form__row
+								.input.input_is-required
+									input(type='text' placeholder='Введите Ф.И.О.' required).input__unit
+							.login-form__row
+								.input.input_hasicon.input_is-required
+									input(type='password' placeholder='Пароль' required).input__unit
+									.input__icon
+										img(src='images/eye.png' alt='')
+							.login-form__row
+								.input.input_is-required
+									input(type='email' placeholder='Электронная почта' required).input__unit
+							.login-form__row
+								.select
+									select.select__unit
+										option(disabled selected) Город
+										option 1
+										option 2
+									.select__icon
+										img(src='images/arrow.png' alt='')
+							.login-form__row
+								.input.input_tel
+									.input__tel-label Телефон
+									input(type='tel' id='phone' name='phone value="+7 (__) ___-__-__" pattern="^\+7(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"').input__unit
+							.login-form__row
+								.genderRadio
+									label.genderRadio__unit
+										input(type='radio' name='gender' value='man' checked)
+										span Я - парень
+									.genderRadio__toggler
+									label.genderRadio__unit
+										input(type='radio' name='gender' value='woman')
+										span Я - девушка
+						.login-form__col
+							.login-form__row.login-form__row_title
+								h2 Важно знать!
+							.login-form__row.login-form__row_content
+								.content-block
+									.content-block__avatar
+										img(src="images/avatar.jpg", alt="")
+									.content-block__list
+										ol(type="1")
+											li Развивайтесь не смотря ни на что
+											li Не повторяйте за тем, кто повторяет
+							.login-form__row.login-form__row_upload
+								.dragNdropUpload
+									input(type='file').dragNdropUpload__unit
+									.dragNdropUpload__area
+										.dragNdropUpload__text Загрузить фото
+							.login-form__row.login-form__row_check
+								label.checkbox
+									input(type='checkbox')
+									.checkbox__mask
+									span.checkbox__label Я прочитал и соглашаюсь и соглашаюсь с правилами участия в акции
+							.login-form__row
+								button.btn(type='submit') Учавствовать
+
+
+		//- script(href='../vendor/jquery.min.js')
+		script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js")
+		script(src='js/script.min.js')
