@@ -119,13 +119,23 @@ h2 {
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
+
+		flex-wrap: wrap;
+
+		@media (min-width: 700px) {
+			flex-wrap: nowrap;
+		}
 	}
 
 	&__col {
 		flex: 1 1 auto;
-		width: 50%;
+		width: 100%;
 
-		padding: 0 2.5rem
+		padding: 0 2.5rem;
+
+		@media (min-width: 700px) {
+			width: 50%;
+		}
 	}
 }
 
